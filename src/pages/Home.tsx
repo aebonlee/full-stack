@@ -14,7 +14,7 @@ const categories: Category[] = [
   { to: '/deploy', icon: <FiGlobe size={24} />, title: '배포', description: 'GitHub Pages, 도메인 설정, OG 태그, CI/CD 자동화를 학습합니다.', badge: '4 토픽' },
   { to: '/projects', icon: <FiLayers size={24} />, title: '실전 프로젝트', description: '프로젝트 설계부터 풀스택 구축, 커뮤니티, 관리자 대시보드, 포트폴리오까지.', badge: '5 토픽' },
   { to: '/qna', icon: <FiHelpCircle size={24} />, title: 'Q&A', description: '풀스택 학습 중 자주 묻는 질문과 답변을 모았습니다.' },
-  { to: '/education', icon: <FiBookOpen size={24} />, title: '교육과정', description: '입문부터 고급까지 체계적인 커리큘럼으로 단계별 학습하세요.' },
+  { to: '/education', icon: <FiBookOpen size={24} />, title: '과정소개', description: '풀스택 개발 커리큘럼과 창업교실 프로그램을 소개합니다.' },
 ];
 
 const roadmapSteps: RoadmapStep[] = [

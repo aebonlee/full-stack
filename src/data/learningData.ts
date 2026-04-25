@@ -951,7 +951,7 @@ export const faqData: FaqItem[] = [
   { question: '이 사이트의 기술 스택은?', answer: 'React 19 + Vite 7 + TypeScript + Supabase + GitHub Pages입니다. 이 사이트 자체가 학습하는 풀스택 기술로 만들어졌습니다. 소스 코드는 GitHub에서 확인할 수 있습니다.' },
 ];
 
-/* ─── 교육과정 ─── */
+/* ─── 과정소개 ─── */
 export const educationData: EducationCourse[] = [
   {
     id: 'beginner',
@@ -983,6 +983,100 @@ export const educationData: EducationCourse[] = [
   },
 ];
 
+/* ─── 창업교실 ─── */
+export interface StartupCourse {
+  id: string;
+  title: string;
+  duration: string;
+  target: string;
+  description: string;
+  curriculum: string[];
+  outcomes: string[];
+}
+
+export const startupClassData: StartupCourse[] = [
+  {
+    id: 'startup-idea',
+    title: '창업 아이디어와 비즈니스 모델',
+    duration: '4주 (주 2회, 총 16시간)',
+    target: '예비 창업자, 대학생, 직장인',
+    description: '아이디어 발굴부터 비즈니스 모델 캔버스 작성, 린 스타트업 방법론까지 창업의 첫 단계를 체계적으로 준비합니다.',
+    curriculum: [
+      '창업 트렌드 분석과 아이디어 발굴법',
+      '비즈니스 모델 캔버스(BMC) 작성 실습',
+      '고객 세그먼트와 가치 제안 설계',
+      '린 스타트업과 MVP(최소 기능 제품) 전략',
+      '수익 모델 설계와 비용 구조 분석',
+      '피칭 자료 작성과 발표 실습',
+    ],
+    outcomes: [
+      '나만의 비즈니스 모델 캔버스 완성',
+      'MVP 기획서 작성',
+      '3분 엘리베이터 피치 발표',
+    ],
+  },
+  {
+    id: 'startup-web',
+    title: 'AI 코딩으로 웹 서비스 구축',
+    duration: '6주 (주 2회, 총 24시간)',
+    target: '비전공자 창업자, 1인 창업 준비생',
+    description: 'Claude Code와 바이브코딩을 활용하여 코딩 경험이 없어도 나만의 웹 서비스를 직접 구축하고 배포합니다.',
+    curriculum: [
+      'AI 코딩 도구 소개 (Claude Code, Cursor, Copilot)',
+      'React + Vite로 프론트엔드 구축 (바이브코딩)',
+      'Supabase로 백엔드 구축 (데이터베이스, 인증)',
+      '결제 시스템 연동 (PortOne)',
+      '랜딩 페이지와 마케팅 사이트 제작',
+      'GitHub Pages 배포와 커스텀 도메인 설정',
+    ],
+    outcomes: [
+      '완성된 웹 서비스 1개 (실제 배포)',
+      '커스텀 도메인이 연결된 사업용 웹사이트',
+      'AI 코딩 도구 활용 능력',
+    ],
+  },
+  {
+    id: 'startup-marketing',
+    title: '디지털 마케팅과 고객 확보',
+    duration: '4주 (주 2회, 총 16시간)',
+    target: '초기 스타트업, 소상공인, 1인 사업자',
+    description: 'SEO, SNS 마케팅, 콘텐츠 전략, 데이터 분석까지 디지털 마케팅의 핵심을 실전 중심으로 학습합니다.',
+    curriculum: [
+      'SEO 최적화와 OG 태그 설정',
+      'Google Analytics & Search Console 활용',
+      'SNS 마케팅 전략 (인스타그램, 유튜브, 블로그)',
+      '콘텐츠 마케팅과 브랜딩',
+      '이메일 마케팅 자동화 (Resend, Mailchimp)',
+      '고객 데이터 분석과 리텐션 전략',
+    ],
+    outcomes: [
+      'SEO 최적화된 웹사이트',
+      'SNS 마케팅 채널 구축',
+      '월간 마케팅 실행 계획서',
+    ],
+  },
+  {
+    id: 'startup-growth',
+    title: '스타트업 성장과 투자 유치',
+    duration: '4주 (주 2회, 총 16시간)',
+    target: '초기 스타트업 대표, 예비 창업자',
+    description: '사업 확장 전략, 팀 빌딩, IR 피칭, 정부 지원 사업 신청까지 스타트업 성장에 필요한 실전 전략을 학습합니다.',
+    curriculum: [
+      '스타트업 성장 단계별 전략',
+      '팀 빌딩과 조직 문화 구축',
+      '정부/지자체 창업 지원 사업 활용법',
+      '엔젤 투자와 시드 투자 유치 전략',
+      'IR 덱(투자 제안서) 작성법',
+      '법인 설립과 지적재산권(IP) 관리',
+    ],
+    outcomes: [
+      'IR 덱(투자 제안서) 완성',
+      '정부 지원 사업 신청서 작성',
+      '10분 투자 피칭 발표',
+    ],
+  },
+];
+
 /* ─── 검색 인덱스 ─── */
 export const searchData: SearchItem[] = [
   // 프론트엔드
@@ -999,6 +1093,7 @@ export const searchData: SearchItem[] = [
   ...projectTopics.map(t => ({ title: t.title, category: '프로젝트', path: '/projects', icon: t.icon })),
   // 기타
   { title: 'Q&A', category: '자주 묻는 질문', path: '/qna', icon: '❓' },
-  { title: '교육과정', category: '커리큘럼', path: '/education', icon: '📚' },
+  { title: '과정소개', category: '커리큘럼', path: '/education', icon: '📚' },
+  { title: '창업교실', category: '과정소개', path: '/education', icon: '🚀' },
   { title: '커뮤니티', category: '게시판', path: '/community', icon: '💬' },
 ];
