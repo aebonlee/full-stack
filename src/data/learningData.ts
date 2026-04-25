@@ -547,6 +547,64 @@ D:\\dreamit-web\\
 /* ─── 바이브코딩 토픽 ─── */
 export const vibeCodingTopics: Topic[] = [
   {
+    id: 'installation',
+    title: '설치 및 환경설정',
+    icon: '📦',
+    description: 'Claude Code와 VS Code 확장 프로그램을 설치하고, 터미널에서 바로 AI 코딩을 시작할 수 있도록 환경을 구성합니다.',
+    content: [
+      { subtitle: '사전 준비', items: [
+        'Node.js 18 이상 설치 (https://nodejs.org)',
+        'Git 설치 (https://git-scm.com)',
+        'VS Code 설치 (https://code.visualstudio.com)',
+        'Anthropic 계정 생성 및 API 키 발급 (https://console.anthropic.com)',
+      ] },
+      { subtitle: '1. Claude Code CLI 설치 (터미널)', text: 'npm으로 전역 설치하면 어디서든 claude 명령어를 사용할 수 있습니다. 설치 후 claude 명령어로 바로 프로젝트 폴더에서 AI 코딩을 시작합니다.' },
+      { subtitle: '2. VS Code에서 Claude Code 사용', text: 'VS Code 터미널(Ctrl+`)에서 직접 claude 명령어를 실행하거나, Claude Code 확장 프로그램을 설치하여 IDE 안에서 통합 사용할 수 있습니다.' },
+      { subtitle: '3. VS Code 확장 프로그램 설치', items: [
+        'VS Code 좌측 Extensions 아이콘 클릭 (Ctrl+Shift+X)',
+        '"Claude Code" 검색 → Anthropic 공식 확장 설치',
+        '설치 후 하단 상태바에 Claude Code 아이콘 표시',
+        '아이콘 클릭 또는 Ctrl+Shift+P → "Claude Code" 입력으로 실행',
+      ] },
+      { subtitle: '4. API 키 설정', text: 'Claude Code를 처음 실행하면 API 키를 입력하라는 안내가 나옵니다. Anthropic Console에서 발급받은 API 키를 입력하면 바로 사용할 수 있습니다. 또는 환경변수로 설정할 수도 있습니다.' },
+      { subtitle: '5. CLAUDE.md 설정 (선택)', text: '프로젝트 루트에 CLAUDE.md 파일을 생성하면, Claude Code가 프로젝트의 규칙과 컨텍스트를 자동으로 이해합니다. 기술 스택, 폴더 구조, 코딩 컨벤션 등을 작성합니다.' },
+      { subtitle: '추천 VS Code 확장 프로그램', items: [
+        'Claude Code (Anthropic) — CLI 통합',
+        'GitHub Copilot — 코드 자동완성',
+        'ESLint — 코드 품질 검사',
+        'Prettier — 코드 포맷팅',
+        'Korean Language Pack — 한국어 UI',
+      ] },
+    ],
+    code: `# ── Claude Code CLI 설치 ──
+npm install -g @anthropic-ai/claude-code
+
+# 설치 확인
+claude --version
+
+# ── API 키 설정 (환경변수) ──
+# Windows (PowerShell)
+$env:ANTHROPIC_API_KEY="sk-ant-api03-..."
+
+# Mac/Linux
+export ANTHROPIC_API_KEY="sk-ant-api03-..."
+
+# ── 프로젝트에서 Claude Code 시작 ──
+cd D:/dreamit-web/full-stack
+claude
+
+# ── 바로 명령 실행 (비대화형) ──
+claude "package.json을 분석하고 구조를 설명해줘"
+
+# ── VS Code 터미널에서 사용 ──
+# Ctrl+\` 로 터미널 열기 → claude 입력
+claude "src/App.tsx를 분석해줘"
+
+# ── CLAUDE.md 생성 예시 ──
+claude "이 프로젝트의 CLAUDE.md 파일을 만들어줘"`,
+    codeLang: 'bash',
+  },
+  {
     id: 'vibe-concept',
     title: '바이브코딩 개념',
     icon: '🎵',
