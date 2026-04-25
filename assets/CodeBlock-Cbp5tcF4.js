@@ -1,0 +1,8 @@
+import{r as a,j as s,m as d,n as h}from"./index-CpfzUpOZ.js";function l(i,r){return i.split(`
+`).map((e,c)=>{const t=e.trimStart();if(r==="bash"||r==="shell"){if(t.startsWith("#"))return s.jsxs("span",{style:{color:"#64748B"},children:[e,`
+`]},c);if(t.startsWith("$")||t.startsWith("npm ")||t.startsWith("npx ")||t.startsWith("git ")||t.startsWith("claude ")||t.startsWith("cd "))return s.jsxs("span",{style:{color:"#7DD3FC"},children:[e,`
+`]},c)}if(r==="javascript"||r==="typescript"||r==="tsx"||r==="jsx"){if(t.startsWith("//"))return s.jsxs("span",{style:{color:"#64748B"},children:[e,`
+`]},c);if(t.startsWith("import ")||t.startsWith("export ")||t.startsWith("const ")||t.startsWith("function ")||t.startsWith("return "))return s.jsxs("span",{style:{color:"#C4B5FD"},children:[e,`
+`]},c)}return r==="json"&&t.startsWith('"')?s.jsxs("span",{style:{color:"#86EFAC"},children:[e,`
+`]},c):s.jsxs("span",{children:[e,`
+`]},c)})}function x({code:i,language:r="javascript",title:e}){const[c,t]=a.useState(!1),n=async()=>{try{await navigator.clipboard.writeText(i),t(!0),setTimeout(()=>t(!1),2e3)}catch{const o=document.createElement("textarea");o.value=i,document.body.appendChild(o),o.select(),document.execCommand("copy"),document.body.removeChild(o),t(!0),setTimeout(()=>t(!1),2e3)}};return s.jsxs("div",{className:"code-block",children:[s.jsxs("div",{className:"code-block-header",children:[s.jsx("span",{className:"code-block-lang",children:e||r}),s.jsx("button",{className:"code-block-copy",onClick:n,children:c?s.jsxs(s.Fragment,{children:[s.jsx(d,{size:12})," 복사됨"]}):s.jsxs(s.Fragment,{children:[s.jsx(h,{size:12})," 복사"]})})]}),s.jsx("pre",{children:s.jsx("code",{children:l(i,r)})})]})}export{x as C};
