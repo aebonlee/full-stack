@@ -165,8 +165,8 @@ a:hover { color: var(--primary-dark); }
 .code-block-copy:hover { border-color: #58A6FF; color: #58A6FF; background: rgba(56,139,253,0.15); }
 .code-block-body { display: flex; overflow-x: auto; }
 .code-block-gutter { flex-shrink: 0; padding: 16px 0; background: #0D1117; border-right: 1px solid #21262D; user-select: none; min-width: 48px; text-align: right; }
-.code-line-number { padding: 0 12px; font-family: var(--font-mono); font-size: 12px; line-height: 1.7; color: #484F58; }
-.code-block pre { flex: 1; padding: 16px 20px; overflow-x: auto; font-family: var(--font-mono); font-size: 13px; line-height: 1.7; color: #E6EDF3; margin: 0; background: transparent; }
+.code-line-number { padding: 0 12px; font-family: var(--font-mono); font-size: 16px; line-height: 1.7; color: #484F58; }
+.code-block pre { flex: 1; padding: 16px 20px; overflow-x: auto; font-family: var(--font-mono); font-size: 17px; line-height: 1.7; color: #E6EDF3; margin: 0; background: transparent; }
 .code-block code { font-family: var(--font-mono); color: #E6EDF3; }
 .code-line { min-height: 1.7em; }
 .code-line:hover { background: rgba(110,118,129,0.08); }
