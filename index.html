@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FULL-STACK - Claude Code & 바이브코딩으로 풀스택 개발을 배우는 학습 플랫폼. React, Supabase, 배포까지 한번에." />
+    <meta name="author" content="DreamIT Biz" />
+    <meta name="theme-color" content="#0A2463" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://full-stack.dreamitbiz.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FULL-STACK" />
+    <meta property="og:title" content="FULL-STACK - Claude Code & 바이브코딩 풀스택 학습" />
+    <meta property="og:description" content="Claude Code & 바이브코딩으로 풀스택 개발을 배우는 학습 플랫폼. React, Supabase, 배포까지 한번에." />
+    <meta property="og:url" content="https://full-stack.dreamitbiz.com" />
+    <meta property="og:image" content="https://full-stack.dreamitbiz.com/og-image.png" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://full-stack.dreamitbiz.com/" />
+    <meta name="twitter:title" content="FULL-STACK - Claude Code & 바이브코딩 풀스택 학습" />
+    <meta name="twitter:description" content="Claude Code & 바이브코딩으로 풀스택 개발을 배우는 학습 플랫폼. React, Supabase, 배포까지 한번에." />
+    <meta name="twitter:image" content="https://full-stack.dreamitbiz.com/og-image.png" />
+
+    <title>FULL-STACK - Claude Code & 바이브코딩 풀스택 학습</title>
+    <script>
+      (function(){
+        var t=localStorage.getItem('fs-theme');
+        if(!t){var h=new Date().getHours();t=(h>=18||h<6)?'dark':'light';}
+        document.documentElement.setAttribute('data-theme',t);
+        var c=localStorage.getItem('fs-colorTheme')||'blue';
+        document.documentElement.setAttribute('data-color',c);
+      })()
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
