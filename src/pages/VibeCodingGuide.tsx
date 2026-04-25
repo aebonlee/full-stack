@@ -102,21 +102,21 @@ export default function VibeCodingGuide(): React.ReactElement {
                   <h4>AI 코딩 도구 비교</h4>
                   <div className="ai-tools-grid">
                     {aiTools.map((tool, i) => (
-                      <div className="ai-tool-card" key={i}>
-                        <div className="ai-tool-card-header" style={{ borderLeftColor: tool.color }}>
+                      <div className="ai-tool-card" key={i} style={{ borderTopColor: tool.color }}>
+                        <div className="ai-tool-left" style={{ background: `${tool.color}10` }}>
                           <span className="ai-tool-icon">{tool.icon}</span>
-                          <div>
-                            <div className="ai-tool-name">{tool.name}</div>
-                            <div className="ai-tool-type">{tool.type}</div>
-                          </div>
+                          <div className="ai-tool-name">{tool.name}</div>
+                          <div className="ai-tool-type">{tool.type}</div>
                         </div>
-                        <ul className="ai-tool-features">
-                          {tool.features.map((f, j) => (
-                            <li key={j}>{f}</li>
-                          ))}
-                        </ul>
-                        <div className="ai-tool-best">
-                          <strong>추천:</strong> {tool.bestFor}
+                        <div className="ai-tool-right">
+                          <ul className="ai-tool-features">
+                            {tool.features.map((f, j) => (
+                              <li key={j}>{f}</li>
+                            ))}
+                          </ul>
+                          <div className="ai-tool-best">
+                            <strong>추천:</strong> {tool.bestFor}
+                          </div>
                         </div>
                       </div>
                     ))}
