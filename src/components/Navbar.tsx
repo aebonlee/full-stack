@@ -7,7 +7,6 @@ import { useAuth } from '../contexts/AuthContext';
 interface NavItem { path: string; label: string; }
 
 const navItems: NavItem[] = [
-  { path: '/', label: '홈' },
   { path: '/frontend', label: '프론트엔드' },
   { path: '/backend', label: '백엔드' },
   { path: '/claude-code', label: 'Claude Code' },
@@ -37,7 +36,6 @@ export default function Navbar(): React.ReactElement {
         <Link to="/" className="navbar-brand">
           <span className="brand-main">FULL</span>
           <span className="brand-accent">-STACK</span>
-          <span className="brand-sub">풀스택 학습</span>
         </Link>
 
         <div className="navbar-links">
